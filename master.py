@@ -402,12 +402,12 @@ else:
 # print(format_info)
 # print (f"{information}")
 
-number1 = 4.141592653589793
-formatted_number = f"{number1:.2f}"
-print(formatted_number)
-number = 573257235
-format_number = f"{number:,}"
-print(format_number)
+# number1 = 4.141592653589793
+# formatted_number = f"{number1:.2f}"
+# print(formatted_number)
+# number = 573257235
+# format_number = f"{number:,}"
+# print(format_number)
 
 
 # pi = 3.141592653589793
@@ -418,3 +418,17 @@ print(format_number)
 # large_number = 1234567
 # formatted_number = f"{large_number:,}"
 # print(formatted_number)  # Output: 1,234,567
+
+# square_set = {x**2 for x in range (1, 6)}
+# print(square_set)
+
+# even_set= {x for x in range(1, 11) if x%2 == 0}
+# print(even_set)
+
+# new_set= {i for i in range(1, 21) if i % 2 == 0}
+# print ("The even numbers are: ", new_set)
+# Creating a single set for both even and odd numbers
+number_set = sorted([i if i % 2 == 0 else f"Odd-{i}" for i in range(1, 21)])
+
+# Printing the set
+print("The numbers (even and odd) are:", number_set)
