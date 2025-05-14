@@ -428,7 +428,17 @@ else:
 # new_set= {i for i in range(1, 21) if i % 2 == 0}
 # print ("The even numbers are: ", new_set)
 # Creating a single set for both even and odd numbers
-number_set = sorted([i if i % 2 == 0 else f"Odd-{i}" for i in range(1, 21)])
+# number_set = {f"Even-{i}" if i % 2 == 0 else f"Odd{i}" for i in range(1, 21)}
 
-# Printing the set
-print("The numbers (even and odd) are:", number_set)
+# # Printing the set
+# print("The numbers (even and odd) are:", number_set)
+
+# Creating a set for both even and odd numbers
+number_set = {f"Even-{i}" if i % 2 == 0 else f"Odd-{i}" for i in range(1, 21)}
+
+# Sorting the set to ensure even numbers come first, followed by odd numbers
+sorted_number_list = sorted(number_set, key=lambda x: (x.startswith('Odd'), int(x.split('-')[1])))
+
+# Printing the sorted list
+print("The numbers (even and odd) are:", sorted_number_list)
+
