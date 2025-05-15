@@ -547,11 +547,27 @@ else:
 # #new_array = array.array("i", (f*3 for f in new_array))
 # for x in new_array:
 #     print(x)
-import array as arr
-a = arr.array("i", [1, 2, 3, 4, 5, 6])
-b = arr.array('i')
+# import array as arr
+# a = arr.array("i", [10,5,15,4,6,20,9])
+# b = arr.array('i')
 
-for i in range(len(a)-1, -1, -1):
-    b.append(a[i])
-print("The original array is: ", a)
-print("The Inverse array is: ", b)
+# for i in range(len(a)-1, -1, -1):
+#     b.append(a[i])
+    
+# print("The original array is: ", a)
+# print("The Inverse array is: ", b)
+
+import array as arr
+Original_array = arr.array("i", [10,5,15,4,6,20,9])
+
+print("The original array is: ", Original_array)
+
+array_as_list = Original_array.tolist()
+
+array_as_list.sort()
+
+sorted_array = arr.array("i", array_as_list)
+
+print("The Sorthed array is: ", sorted_array)
+
+print(sorted_array)
