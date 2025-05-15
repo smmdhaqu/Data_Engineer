@@ -482,10 +482,18 @@ else:
 # print(new_set)
 # print("Upadted set is: ", my_set)
 s1 = {1, 2, 3, 4, 5}
-s2 = {7, 8, 2, 9, 10, 3}
-print("S1: ", s1, "S2: ", s2)
+new_set = list (s1)
+# my_set = {25, 12, 10, 21, 10, 100}
+# s2 = {7, 8, 2, 9, 10, 3}
+# print("S1: ", s1, "S2: ", s2)
 
-s3= s1.intersection(s2)
-s4= s1.symmetric_difference(s2)
-print(s3)
-print(s4)
+# s3= s1.intersection(s2)
+# s4= s1.symmetric_difference(s2)
+# print(s3)
+# print(s4)
+# for i in s1:
+#     print(s1)
+# square_s1= {x**2 for x in s1 if x % 2 == 0}
+# print(square_s1)
+for index, x in enumerate(new_set):
+    print(new_set)
