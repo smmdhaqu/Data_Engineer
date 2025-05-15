@@ -469,7 +469,23 @@ else:
 
 # uniq_set= my_set1 | my_set2
 # print(uniq_set)
-number_list = [1, 2, 3, 4]
-numbers_set = {x**2 for x in number_list}
-print("The numbers are: {}, {}".format(number_list, numbers_set))
-print(numbers_set)
+# number_list = [1, 2, 3, 4]
+# numbers_set = {x**2 for x in number_list}
+# numbers_set2 = [x**2 for x in number_list]
+# print("The numbers are: {}, {}, {}".format(number_list, numbers_set, numbers_set2))
+# print(numbers_set)
+# my_set= {1, 2, 3, 4, "Shams", "Raaju"}
+# print(my_set)
+# my_set.discard(3)
+# print(my_set)
+# new_set = my_set.pop()
+# print(new_set)
+# print("Upadted set is: ", my_set)
+s1 = {1, 2, 3, 4, 5}
+s2 = {7, 8, 2, 9, 10, 3}
+print("S1: ", s1, "S2: ", s2)
+
+s3= s1.intersection(s2)
+s4= s1.symmetric_difference(s2)
+print(s3)
+print(s4)
