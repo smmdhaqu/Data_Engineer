@@ -459,7 +459,17 @@ else:
 # print(my_set)
 # my_set.update([4])
 # print("The set is: ",my_set)
-my_set1 = {1, 2, "Python", 4, "Data"}
-my_set2 = {2, "SQL", 3 , "Science"}
-my_set1.update(my_set2)
-print(my_set1)
+# my_set1 = {1, 2, "Python", 4, "Data", 5}
+# my_set2 = {2, "SQL", 3 , "Science", 5}
+# my_set1.update(my_set2)
+# print(my_set1)
+
+# both_set= my_set1.union(my_set2)
+# print(both_set)
+
+# uniq_set= my_set1 | my_set2
+# print(uniq_set)
+number_list = [1, 2, 3, 4]
+numbers_set = {x**2 for x in number_list}
+print("The numbers are: {}, {}".format(number_list, numbers_set))
+print(numbers_set)
