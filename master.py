@@ -506,13 +506,13 @@ else:
 s1 = {1, 2, 3}
 s2 = {3, 4, 5}
 
-# joining_set= set()
+joining_set= set()
 
-# for x in s1:
-#     joining_set.add(x)
-# for x in s2:
-#     joining_set.add(x)
-# print(joining_set)
+for x in s1:
+    joining_set.add(x)
+for x in s2:
+    joining_set.add(x)
+print(joining_set)
 
-s3 = s1.union(s2)
-print(s3)
+# s3 = s1.union(s2)
+# print(s3)
