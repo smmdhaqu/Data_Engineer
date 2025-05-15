@@ -517,13 +517,26 @@ else:
 # s3 = s1.union(s2)
 # print(s3)
 
-numbers = [1, 2, 3, 4, 5]
+# numbers = [1, 2, 3, 4, 5]
 
-numbers.append(6)
-print(numbers)
+# numbers.append(6)
+# print(numbers)
 
-numbers.remove(5)
-print(numbers)
+# numbers.remove(5)
+# print(numbers)
 
-numbers.pop(3)
-print(numbers)
+# numbers.pop(3)
+# print(numbers)
+import array
+arr = array.array("i", [12, 18, 8, 1972])
+print(arr)
+arr = [x** 2 for x in arr]
+
+print(arr)
+    
+# print(arr[0])
+# print(arr[1])
+
+# numbers = [1, 2, 3, 4]
+# for x in numbers:
+#     print(x)
