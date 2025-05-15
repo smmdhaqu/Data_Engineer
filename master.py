@@ -541,9 +541,17 @@ else:
 # for x in numbers:
 #     print(x)
 
-import array
-new_array = array.array('i', [1, 2, 3, 4, 5])
+# import array
+# new_array = array.array("i", [1, 2, 3, 4, 5])
 
-new_array = array.array('i', (i**2 for i in new_array))
+# #new_array = array.array("i", (f*3 for f in new_array))
+# for x in new_array:
+#     print(x)
+import array as arr
+a = arr.array("i", [1, 2, 3, 4, 5, 6])
+b = arr.array('i')
 
-print(new_array)
+for i in range(len(a)-1, -1, -1):
+    b.append(a[i])
+print("The original array is: ", a)
+print("The Inverse array is: ", b)
