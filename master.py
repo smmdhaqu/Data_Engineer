@@ -503,16 +503,27 @@ else:
 # for index, x in enumerate(my_set):
 #     print("Index: ", index, "Item->", x)
     
-s1 = {1, 2, 3}
-s2 = {3, 4, 5}
+# s1 = {1, 2, 3}
+# s2 = {3, 4, 5}
 
-joining_set= set()
+# joining_set= set()
 
-for x in s1:
-    joining_set.add(x)
-for x in s2:
-    joining_set.add(x)
-print(joining_set)
+# for x in s1:
+#     joining_set.add(x)
+# for x in s2:
+#     joining_set.add(x)
+# print(joining_set)
 
 # s3 = s1.union(s2)
 # print(s3)
+
+numbers = [1, 2, 3, 4, 5]
+
+numbers.append(6)
+print(numbers)
+
+numbers.remove(5)
+print(numbers)
+
+numbers.pop(3)
+print(numbers)
