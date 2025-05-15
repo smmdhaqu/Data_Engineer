@@ -527,12 +527,12 @@ else:
 
 # numbers.pop(3)
 # print(numbers)
-import array
-arr = array.array("i", [12, 18, 8, 1972])
-print(arr)
-arr = [x** 2 for x in arr]
+# import array
+# arr = array.array("i", [12, 18, 8, 1972])
+# print(arr)
+# arr = [x** 2 for x in arr]
 
-print(arr)
+# print(arr)
     
 # print(arr[0])
 # print(arr[1])
@@ -540,3 +540,10 @@ print(arr)
 # numbers = [1, 2, 3, 4]
 # for x in numbers:
 #     print(x)
+
+import array
+new_array = array.array('i', [1, 2, 3, 4, 5])
+
+new_array = array.array('i', (i**2 for i in new_array))
+
+print(new_array)
