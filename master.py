@@ -435,8 +435,31 @@ else:
 
 # Creating a set for both even and odd numbers
 
-number_set = {f"Even-{i}" if i % 2 == 0 else f"Odd-{i}" for i in range (0, 21)}
+# number_set = {f"Even-{x}" if x % 2 == 0 else f"Odd-{x}" for x in range (0, 21)}
 
-sorted_number_set = sorted(number_set, key= lambda x: (x.startswith("Odd"), int(x.split('-')[1])))
+# sorted_number_set = sorted(number_set, key= lambda x: (x.startswith("Odd"), int(x.split('-')[1])))
 
-print("The sorted Even and Odd numbers are: ", sorted_number_set)
+# print("The sorted Even and Odd numbers are: ", sorted_number_set)
+
+# numbers_set = {"Python", 18, "Data Engineer", 55}
+# for x in numbers_set:
+#     print (x) 
+# number_as_list= [x for x in numbers_set]
+# print(number_as_list)
+
+# import itertools
+# my_set = {1, 2, 3, 4, 5, 6}
+
+# combine_set = [set(subset) for subset in itertools.combinations(my_set, 2)]
+# print(combine_set)
+
+# is_set = {1, 2}.issubset(my_set)
+# print("{1,2} is in the set: ", my_set)
+# my_set = {1,2,3}
+# print(my_set)
+# my_set.update([4])
+# print("The set is: ",my_set)
+my_set1 = {1, 2, "Python", 4, "Data"}
+my_set2 = {2, "SQL", 3 , "Science"}
+my_set1.update(my_set2)
+print(my_set1)
