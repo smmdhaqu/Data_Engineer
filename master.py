@@ -557,17 +557,52 @@ else:
 # print("The original array is: ", a)
 # print("The Inverse array is: ", b)
 
-import array as arr
-Original_array = arr.array("i", [10,5,15,4,6,20,9])
+# import array as arr
+# Original_array = arr.array("i", [10,5,15,4,6,20,9])
 
-print("The original array is: ", Original_array)
+# print("The original array is: ", Original_array)
 
-array_as_list = Original_array.tolist()
+# array_as_list = Original_array.tolist()
 
-array_as_list.sort()
+# array_as_list.sort()
 
-sorted_array = arr.array("i", array_as_list)
+# sorted_array = arr.array("i", array_as_list)
 
-print("The Sorthed array is: ", sorted_array)
+# print("The Sorthed array is: ", sorted_array)
 
-print(sorted_array)
+# print(sorted_array)
+
+# import array as arr
+# Original_array = arr.array("i", [10,5,15,4,6,20,9])
+
+# import array as arr
+# a = arr.array('i', [88, 99, 77, 66, 44, 22])
+# b = arr.array('i', [12, 17, 18, 11, 13, 10])
+# a.extend(b)
+# print (a)  
+
+# class Student:
+#     roll = ""
+#     gpa = ""
+    
+
+# shams = Student()
+# shams.roll = 1
+# shams.gpa = 2.7
+# print(f"Hello Shams, your roll number is {shams.roll} and you GPA is {shams.gpa }")
+
+class Student:
+    def __init__(self, name, roll, gpa):
+        self.name = name
+        self.roll = roll
+        self.gpa = gpa   
+    
+    def display(self):
+        print(f"Hello {self.name}, your roll number is {self.roll} and your GPA is {self.gpa}\n")
+
+# Create student objects with name, roll, and gpa
+shams = Student("Shams", 10, 2.7)
+shams.display()
+
+Raaju = Student("Raaju", 20, 2.8)
+Raaju.display()
