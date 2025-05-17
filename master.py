@@ -591,18 +591,31 @@ else:
 # shams.gpa = 2.7
 # print(f"Hello Shams, your roll number is {shams.roll} and you GPA is {shams.gpa }")
 
-class Student:
-    def __init__(self, name, roll, gpa):
-        self.name = name
-        self.roll = roll
-        self.gpa = gpa   
+# class Student:
+#     def __init__(self, name, roll, gpa):
+#         self.name = name
+#         self.roll = roll
+#         self.gpa = gpa
+#         self.display()
     
+#     def display(self):
+#         print(f"Hello {self.name}, your roll number is {self.roll} and your GPA is {self.gpa}\n")
+
+# # Create student objects with name, roll, and gpa
+# shams = Student("Shams", 10, 2.7)
+
+# Raaju = Student("Raaju", 20, 2.8)
+
+class Car:
+    def __init__(self, model, year, miles):
+        self.model= model
+        self.year= year
+        self.miles= miles
+        self.display()
+        
     def display(self):
-        print(f"Hello {self.name}, your roll number is {self.roll} and your GPA is {self.gpa}\n")
+        print(f"The model {self.model} was built in {self.year} and already ran around {self.miles} miles")
 
-# Create student objects with name, roll, and gpa
-shams = Student("Shams", 10, 2.7)
-shams.display()
+bmw = Car("V77", 2025, 2000)
 
-Raaju = Student("Raaju", 20, 2.8)
-Raaju.display()
+marcedes = Car("i37", 2022, 5000)
