@@ -703,30 +703,65 @@ else:
 # num3 = num1 + num2  # Uses __add__ method
 # num3.display()      # 15
 
-class Human:
-    def walk(self):
-        print("Human can walk")
+# class Human:
+#     def walk(self):
+#         print("Human can walk")
 
-class Man(Human):
-    def walk(self):
-        print("Man can walk too")
+# class Man(Human):
+#     def walk(self):
+#         print("Man can walk too")
         
-class Woman(Human):
-    def walk(self):
-        print("Woman can also walk")
+# class Woman(Human):
+#     def walk(self):
+#         print("Woman can also walk")
 
-def display(human):
-    human.walk()
+# def display(human):
+#     human.walk()
 
-human = Human()
-man = Man()
-woman = Woman()
+# human = Human()
+# man = Man()
+# woman = Woman()
 
-display(human)
-display(man)
-display(woman)
-
-
-
+# display(human)
+# display(man)
+# display(woman)
+# class Number():
+#     def __init__(self, numb1):
+#         self.numb1 = numb1
     
+#     def __add__(self, numb2):
+#         return Number (self.numb1 + numb2.numb1)
+    
+#     def display(self):
+#         print(self.numb1)
+    
+# number1 = Number(20)
+# number2 = Number(10)
+# number3 = number1 + number2
+# number3.display()
 
+from abc import ABC, abstractmethod
+
+class Vichel(ABC):
+    @abstractmethod
+    
+    def start_engine(self):
+        pass
+class Bus(Vichel):
+    def start_engine(self):
+        print("Bus uses the Key to start")
+
+class Bike(Vichel):
+    def start_engine(self):
+        print("Bike can start automatically")
+
+def vichel_start_system(vichel : Vichel):
+    vichel.start_engine()
+
+bus = Bus()
+bike = Bike()
+vichel_start_system(bus)
+vichel_start_system(bike)
+
+
+        
