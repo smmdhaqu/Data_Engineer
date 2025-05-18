@@ -740,28 +740,56 @@ else:
 # number3 = number1 + number2
 # number3.display()
 
+# from abc import ABC, abstractmethod
+
+# class Vichel(ABC):
+#     @abstractmethod
+    
+#     def start_engine(self):
+#         pass
+# class Bus(Vichel):
+#     def start_engine(self):
+#         print("Bus uses the Key to start")
+
+# class Bike(Vichel):
+#     def start_engine(self):
+#         print("Bike can start automatically")
+
+# def vichel_start_system(vichel : Vichel):
+#     vichel.start_engine()
+
+# bus = Bus()
+# bike = Bike()
+# vichel_start_system(bus)
+# vichel_start_system(bike)
+
 from abc import ABC, abstractmethod
 
-class Vichel(ABC):
+class Paymentsystem(ABC):
     @abstractmethod
-    
-    def start_engine(self):
+    def pay(self, amount):
         pass
-class Bus(Vichel):
-    def start_engine(self):
-        print("Bus uses the Key to start")
+    
+class Creditcard(Paymentsystem):
+    def pay(self, amount):
+        print(f"I am paying {amount} using Credit Card")
 
-class Bike(Vichel):
-    def start_engine(self):
-        print("Bike can start automatically")
+class Paypal(Paymentsystem):
+    def pay(self, amount):
+        print(f"I am paying {amount} using PayPal")
 
-def vichel_start_system(vichel : Vichel):
-    vichel.start_engine()
+class Bankcard (Paymentsystem):
+    def pay(self, amount):
+        print (f"I am paying {amount} using Bankcard")
 
-bus = Bus()
-bike = Bike()
-vichel_start_system(bus)
-vichel_start_system(bike)
+def payment_process (paymentsystem : Paymentsystem, amount):
+    paymentsystem.pay(amount)
 
+creditcard = Creditcard()
+paypal = Paypal()
+bankcard = Bankcard()
 
-        
+payment_process(creditcard, 200)
+payment_process(paypal, 100)
+payment_process(bankcard, 300)
+
