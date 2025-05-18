@@ -651,39 +651,82 @@ else:
 # man.walk()
 # man.speak()
 
-class Human():
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
+# class Human():
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
     
-    def info(self):
-        print(f"As a Human your name is {self.name} and you are {self.age} years old.")
+#     def info(self):
+#         print(f"As a Human your name is {self.name} and you are {self.age} years old.")
+
+# class Man(Human):
+#     def __init__(self, name, age, gender):
+#         self.name = name 
+#         self.gender= gender
+#         super().__init__(name, age)
+    
+#     def info(self):
+#         super().info()
+#         print(f"You are an {self.gender}")
+
+# class Women(Man):
+#     def __init__(self, name, age, gender, weight):
+#         self.name = name
+#         self.age = age
+#         self.gender = gender
+#         self.weight = weight
+#         super().__init__(name, age, gender)
+        
+#     def info(self):
+#         super().info()
+#         print(f"Your weight is {self.weight}")
+        
+        
+    
+# man = Man ("Shams", 25, "Male")
+# man.info()
+# women = Women("Putul", 21, "Female", 50)
+# women.info()
+
+# class Number:
+#     def __init__(self, value):
+#         self.value = value
+
+#     def __add__(self, other):
+#         return Number(self.value + other.value)
+
+#     def display(self):
+#         print(self.value)
+
+# num1 = Number(5)
+# num2 = Number(10)
+# num3 = num1 + num2  # Uses __add__ method
+# num3.display()      # 15
+
+class Human:
+    def walk(self):
+        print("Human can walk")
 
 class Man(Human):
-    def __init__(self, name, age, gender):
-        self.name = name 
-        self.gender= gender
-        super().__init__(name, age)
-    
-    def info(self):
-        super().info()
-        print(f"You are an {self.gender}")
+    def walk(self):
+        print("Man can walk too")
+        
+class Woman(Human):
+    def walk(self):
+        print("Woman can also walk")
 
-class Women(Man):
-    def __init__(self, name, age, gender, weight):
-        self.name = name
-        self.age = age
-        self.gender = gender
-        self.weight = weight
-        super().__init__(name, age, gender)
-        
-    def info(self):
-        super().info()
-        print(f"Your weight is {self.weight}")
-        
-        
+def display(human):
+    human.walk()
+
+human = Human()
+man = Man()
+woman = Woman()
+
+display(human)
+display(man)
+display(woman)
+
+
+
     
-man = Man ("Shams", 25, "Male")
-man.info()
-women = Women("Putul", 21, "Female", 50)
-women.info()
+
