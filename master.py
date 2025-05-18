@@ -763,33 +763,55 @@ else:
 # vichel_start_system(bus)
 # vichel_start_system(bike)
 
-from abc import ABC, abstractmethod
+# from abc import ABC, abstractmethod
 
-class Paymentsystem(ABC):
-    @abstractmethod
-    def pay(self, amount):
-        pass
+# class Paymentsystem(ABC):
+#     @abstractmethod
+#     def pay(self, amount):
+#         pass
     
-class Creditcard(Paymentsystem):
-    def pay(self, amount):
-        print(f"I am paying {amount} using Credit Card")
+# class Creditcard(Paymentsystem):
+#     def pay(self, amount):
+#         print(f"I am paying {amount} using Credit Card")
 
-class Paypal(Paymentsystem):
-    def pay(self, amount):
-        print(f"I am paying {amount} using PayPal")
+# class Paypal(Paymentsystem):
+#     def pay(self, amount):
+#         print(f"I am paying {amount} using PayPal")
 
-class Bankcard (Paymentsystem):
-    def pay(self, amount):
-        print (f"I am paying {amount} using Bankcard")
+# class Bankcard (Paymentsystem):
+#     def pay(self, amount):
+#         print (f"I am paying {amount} using Bankcard")
 
-def payment_process (paymentsystem : Paymentsystem, amount):
-    paymentsystem.pay(amount)
+# def payment_process (paymentsystem : Paymentsystem, amount):
+#     paymentsystem.pay(amount)
 
-creditcard = Creditcard()
-paypal = Paypal()
-bankcard = Bankcard()
+# creditcard = Creditcard()
+# paypal = Paypal()
+# bankcard = Bankcard()
 
-payment_process(creditcard, 200)
-payment_process(paypal, 100)
-payment_process(bankcard, 300)
+# payment_process(creditcard, 200)
+# payment_process(paypal, 100)
+# payment_process(bankcard, 300)
+
+class Person():
+    def __init__(self, name):
+        self._name= name
+
+    def get_name (self):
+        return self._name
+    
+    def set_name(self, name):
+        if isinstance(name, str) and len(name)> 0:
+            self._name = name
+        else:
+            print("Invalid Name")
+
+person = Person("Shams")
+print(person.get_name())
+
+person.set_name(input("Enter the name: "))
+print(person.get_name())
+
+person.set_name("")
+print(person.get_name())
 
