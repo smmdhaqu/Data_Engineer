@@ -158,7 +158,7 @@ else:
 
 # my_list = ["Shams", 18, "Don't", "Have"]
 
-#my_list.append("Hello")
+# my_list.append("Hello")
 
 # my_list.insert (2, 55)
 # my_list.insert (3, "New mwssages")
@@ -353,14 +353,14 @@ else:
 #     print ("This will print second")
 #     new()
 
-# # print (f"__name__ is : {__name__}")
+# print (f"__name__ is : {__name__}")
 
-# # def new():
-# #     print ("This will print two")
+# def new():
+#     print ("This will print two")
 
-# # if __name__ == "_main_":
-# #     print ("This wil number one")
-# #     new()
+# if __name__ == "_main_":
+#     print ("This wil number one")
+#     new()
 
 # print (f"__name__: {__name__}")
 
@@ -606,16 +606,68 @@ else:
 
 # Raaju = Student("Raaju", 20, 2.8)
 
-class Car:
-    def __init__(self, model, year, miles):
-        self.model= model
-        self.year= year
-        self.miles= miles
-        self.display()
+# class Car:
+#     def __init__(self, model, year, miles):
+#         self.model= model
+#         self.year= year
+#         self.miles= miles
+#         self.display()
         
-    def display(self):
-        print(f"The model {self.model} was built in {self.year} and already ran around {self.miles} miles")
+#     def display(self):
+#         print(f"The model {self.model} was built in {self.year} and already ran around {self.miles} miles")
 
-bmw = Car("V77", 2025, 2000)
+# bmw = Car("V77", 2025, 2000)
 
-marcedes = Car("i37", 2022, 5000)
+# marcedes = Car("i37", 2022, 5000)
+
+# class Human:
+#     def __init__(self, name, age, height):
+#         self.name = name
+#         self.age = age
+#         self.height = height
+#         #print(f"Hello {self.name}, you are {self.age} years old and your height is {self.height}")
+#         self.dislay_infor()
+    
+#     def dislay_infor(self):
+#         print(f"Hello {self.name}, you are {self.age} years old and your height is {self.height}")
+    
+# man = Human("Shams", 25, 5.8)
+# women = Human("Hridi", 13, 5)
+
+# class Human():
+#     def walk(self):
+#         print("Human can walk")
+    
+    
+# class Man(Human):
+#     def walk(self):
+#         print("So a Man can walk too")
+#     def speak(self):
+#         print("Man can also speak")
+
+# human = Human()
+# man = Man()
+# human.walk()
+# man.walk()
+# man.speak()
+
+class Human():
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    
+    def info(self):
+        print(f"As a Human your name is {self.name} and you are {self.age} years old.")
+
+class Man(Human):
+    def __init__(self, name, age, gender):
+        super().__init__(name, age)
+        self.name = name 
+        self.gender= gender
+    
+    def info(self):
+        super().info()
+        print(f"You are an {self.gender}")
+    
+man = Man ("Shams", 25, "Male")
+man.info()
