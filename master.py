@@ -661,13 +661,29 @@ class Human():
 
 class Man(Human):
     def __init__(self, name, age, gender):
-        super().__init__(name, age)
         self.name = name 
         self.gender= gender
+        super().__init__(name, age)
     
     def info(self):
         super().info()
         print(f"You are an {self.gender}")
+
+class Women(Man):
+    def __init__(self, name, age, gender, weight):
+        self.name = name
+        self.age = age
+        self.gender = gender
+        self.weight = weight
+        super().__init__(name, age, gender)
+        
+    def info(self):
+        super().info()
+        print(f"Your weight is {self.weight}")
+        
+        
     
 man = Man ("Shams", 25, "Male")
 man.info()
+women = Women("Putul", 21, "Female", 50)
+women.info()
