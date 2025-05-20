@@ -793,25 +793,77 @@ else:
 # payment_process(paypal, 100)
 # payment_process(bankcard, 300)
 
-class Person():
-    def __init__(self, name):
-        self._name= name
+# class Person():
+#     def __init__(self, name):
+#         self._name= name
 
-    def get_name (self):
+#     def get_name (self):
+#         return self._name
+    
+#     def set_name(self, name):
+#         if isinstance(name, str) and len(name)> 0:
+#             self._name = name
+#         else:
+#             print("Invalid Name")
+
+# person = Person("Shams")
+# print(person.get_name())
+
+# person.set_name(input("Enter the name: "))
+# print(person.get_name())
+
+# person.set_name("")
+# print(person.get_name())
+
+class Person:
+    def __init__(self, name):
+        self.name = name
+    
+    @property
+    def name (self):
         return self._name
     
-    def set_name(self, name):
-        if isinstance(name, str) and len(name)> 0:
-            self._name = name
+    @name.setter
+    def name(self, new_name):
+        if isinstance(new_name, str) and len(new_name) > 2:
+            self._name = new_name
         else:
-            print("Invalid Name")
+            print("Invalid number")
 
-person = Person("Shams")
-print(person.get_name())
+user_input = input("Enter your name: ")
+person = Person(user_input)
 
-person.set_name(input("Enter the name: "))
-print(person.get_name())
+if hasattr(person, '_name'):
+    print(f"Your name is {person.name}")
 
-person.set_name("")
-print(person.get_name())
+
+# class Person:
+#     def __init__(self, name):
+#         # Directly using the setter to validate the name as soon as we create the object
+#         self.name = name  # This will trigger the setter method
+    
+#     @property
+#     def name(self):
+#         return self._name
+    
+#     @name.setter
+#     def name(self, new_name):
+#         # Check if the name is a string and has more than 2 characters
+#         if isinstance(new_name, str) and len(new_name) > 1:
+#             self._name = new_name
+#         else:
+#             print("Invalid name")  # Print the error message if validation fails
+
+# # Asking for user input to create a person object
+# user_input = input("Enter the name: ")
+
+# # Create the Person object, triggering the validation
+# person = Person(user_input)
+
+# # If the name is valid, print the name (otherwise it will not be set)
+# if hasattr(person, '_name'):  # Check if '_name' exists, meaning it's valid
+#     print(f"You are {person.name}")
+
+
+
 
