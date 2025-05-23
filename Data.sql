@@ -110,4 +110,16 @@ select concat(author_fname, ' ', author_lname) as Author, count(*) as Books_Numb
 select concat(author_fname, ' ', author_lname) as Author,
 min(released_year) as First_Publish,
 count(*) as Book_number from books 
-group by Author order by Book_number asc;
+group by Author order by Book_number desc;
+
+select concat(author_fname,' ', author_lname) as Full_Name, min(released_year), max(released_year) from books group by Full_Name;
+
+select author_lname,
+count(*) as Books_writte,
+min(released_year) as Previously_Written,
+max(released_year) as New_Written, 
+min(pages) as Pages_Count
+from books
+group by author_lname;
+select title from books;
+select author_lname, count(*) from books group by author_lname;
