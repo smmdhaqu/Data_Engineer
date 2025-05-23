@@ -85,3 +85,6 @@ show databases;
 use library;
 select * from books;
 select author_fname, author_lname, released_year from books order by author_lname, released_year desc;
+select author_fname, author_lname, released_year from books where author_lname like '%da%';
+select * from books;
+select author_fname, author_lname, released_year from books where author_fname like '____';
