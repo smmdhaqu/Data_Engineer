@@ -103,3 +103,6 @@ select author_lname,count(*) as Written_Books from books group by author_lname o
 select released_year, count(*) as Books_Number from books group by released_year order by Books_Number desc;
 
 select title, pages from books where pages = (select max(pages) from books);
+
+select author_fname, author_lname, count(*) from books group by author_fname, author_lname;
+select concat(author_fname, ' ', author_lname) as Author, count(*) as Books_Number from books group by Author;
