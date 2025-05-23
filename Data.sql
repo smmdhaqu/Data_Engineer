@@ -89,7 +89,6 @@ select author_fname, author_lname, released_year from books order by author_lnam
 select author_fname, author_lname, released_year from books where author_lname like '%da%';
 select * from books;
 select author_fname, author_lname, released_year from books where author_fname like '____';
-
 select count(author_fname) from books;
 select count(DISTINCT author_fname, author_lname, book_id) as New_Name from books;
 select count(book_id) from books;
@@ -97,3 +96,8 @@ select count(*) from books where title like '%the%';
 
 select count(distinct author_lname, title) from books;
 select count(*) from books where author_fname like '____';
+show databases;
+select database();
+select * from books;
+select author_lname,count(*) as Written_Books from books group by author_lname order by Written_Books desc;
+select released_year, count(*) as Books_Number from books group by released_year order by Books_Number desc;
