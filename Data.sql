@@ -73,6 +73,7 @@ VALUES
 select * from books;
 select author_lname from books;
 select distinct author_lname from books;
+select title from books where title like '%the%';
 select distinct concat(author_lname, ' ', author_fname) as Unique_Full_Name from books;
 select * from books;
 
@@ -88,3 +89,11 @@ select author_fname, author_lname, released_year from books order by author_lnam
 select author_fname, author_lname, released_year from books where author_lname like '%da%';
 select * from books;
 select author_fname, author_lname, released_year from books where author_fname like '____';
+
+select count(author_fname) from books;
+select count(DISTINCT author_fname, author_lname, book_id) as New_Name from books;
+select count(book_id) from books;
+select count(*) from books where title like '%the%';
+
+select count(distinct author_lname, title) from books;
+select count(*) from books where author_fname like '____';
