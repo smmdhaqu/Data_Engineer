@@ -141,3 +141,16 @@ where pages < 500;
 select title, author_fname, released_year 
 from books 
 where released_year <= 1985;
+
+select title, author_fname, released_year, pages from books
+where released_year >= 2012
+and pages > 200
+and title like '%novel%';
+
+SELECT title, pages FROM books
+WHERE pages < 200 
+OR title LIKE '%stories%';
+
+select author_fname, author_lname, pages, released_year from books
+where released_year 
+Not between 2004 and 2015;
