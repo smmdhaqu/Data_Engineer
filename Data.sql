@@ -84,8 +84,14 @@ select book_id, released_year book_id desc;
 select author_fname, author_lname, released_year from booksorder order by author_lname, released_year;
 show databases;
 use library;
+
 select * from books;
-select author_fname, author_lname, released_year from books order by author_lname, released_year desc;
+SELECT 
+    author_fname, author_lname, released_year
+FROM
+    books
+ORDER BY author_lname , released_year DESC;
+
 select author_fname, author_lname, released_year from books where author_lname like '%da%';
 select * from books;
 select author_fname, author_lname, released_year from books where author_fname like '____';
@@ -154,3 +160,61 @@ OR title LIKE '%stories%';
 select author_fname, author_lname, pages, released_year from books
 where released_year 
 Not between 2004 and 2015;
+
+select cast('9:0:0' as time) as Time;
+
+SELECT * FROM people WHERE birthtime 
+BETWEEN CAST('12:00:00' AS TIME) 
+AND CAST('16:00:00' AS TIME);
+
+select author_fname, author_lname, pages, released_year from books
+where released_year >=2000
+and released_year in ('2000', '2002', '2004', '2006', '2008', '2010', '2012', '2014', '2016')
+order by released_year;
+
+select released_year as Book_Publish
+from books
+where released_year >=2000
+and released_year in ('2000', '2002', '2004', '2006', '2008', '2010', '2012', '2014', '2016')
+order by released_year;
+
+select author_fname, author_lname, pages, released_year from books
+where released_year >=2000
+and released_year % 2 = 1
+order by released_year;
+
+
+SELECT 
+    author_fname,
+    author_lname,
+    pages,
+    released_year,
+    CASE
+        WHEN released_year >= 2000 THEN 'Well Printed Books'
+        ELSE 'Not Printed Well'
+    END AS 'Print_Quality'
+FROM
+    books;
+
+SELECT 
+    title,
+    released_year,
+    stock_quantity,
+    CASE
+        WHEN stock_quantity BETWEEN 0 AND 40 THEN '*'
+        WHEN stock_quantity BETWEEN 41 AND 80 THEN '**'
+        WHEN stock_quantity BETWEEN 81 AND 110 THEN '***'
+        ELSE '*****'
+    END AS Stock
+FROM
+    books
+ORDER BY Stock ASC;
+
+SELECT author_fname, author_lname,
+	CASE
+        WHEN COUNT(*) = 1 THEN '1 book'
+        ELSE CONCAT(COUNT(*), ' books')
+	END AS count
+FROM books
+WHERE author_lname IS NOT NULL
+GROUP BY author_fname, author_lname;
