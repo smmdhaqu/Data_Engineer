@@ -123,3 +123,21 @@ from books
 group by author_lname;
 select title from books;
 select author_lname, count(*) from books group by author_lname;
+select title, author_lname from books where released_year != 2017;
+select author_fname, released_year from books;
+
+select author_fname, author_lname 
+from books 
+where author_fname != 'neil'; 
+
+select concat(author_fname,' ', author_lname) as Full_Name
+from books
+where concat(author_fname,' ', author_lname) not like 'da%';
+
+select title, author_fname, pages 
+from books 
+where pages < 500;
+
+select title, author_fname, released_year 
+from books 
+where released_year <= 1985;
