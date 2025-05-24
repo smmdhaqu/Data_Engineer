@@ -271,3 +271,19 @@ JOIN orders o ON c.id = o.customer_id
 WHERE c.first_name = 'George' 
   AND c.last_name = 'Michael' 
   AND o.order_date = '2014-12-12';
+  
+SELECT 
+    c.id,
+    c.first_name,
+    c.last_name,
+    c.email,
+    o.id,
+    o.order_date,
+    o.amount,
+    o.customer_id
+FROM
+    customers c
+        JOIN
+    orders o ON c.id = o.customer_id
+ORDER BY o.amount DESC
+LIMIT 1;
