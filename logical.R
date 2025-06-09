@@ -62,3 +62,56 @@ words[0]
 words[c(1,3,5)]
 words
 words[c(2,4,6)]
+x <- rnorm(5)
+for (i in x){
+  print (i)
+  i <=x
+}
+
+x <- c(1:5)
+for (i in x){
+  i <x
+  print (i)
+  
+}
+?rnorm()
+
+
+greeting <- function(name = "Shams"){
+  print(paste("Hello, ", name, "!", sep = ""))
+}
+
+greeting()
+greeting("Raaju")
+
+numbers <- function(...){
+  convert_into_vector <- c(...)
+  sum(convert_into_vector)
+}
+
+numbers(5, 10, 15)
+numbers(1, 2, 3)
+
+a <- sapply(1:5, function(x) x^2)
+
+print(a)
+---------------------------------------------------
+
+new_func <- function (func, vector) {
+  
+  sapply(vector, func)
+}
+
+result <- new_func(function(x) x^2, 1:5)
+print(result)
+
+outer_func <- function(argument1) {
+  
+  function(argument2) {
+    
+    return(argument2 * argument1)
+  }
+  
+}
+x <- outer_func(3)
+x(5)
