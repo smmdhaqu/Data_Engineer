@@ -115,3 +115,23 @@ outer_func <- function(argument1) {
 }
 x <- outer_func(3)
 x(5)
+?qplot()
+?diamonds()
+library(ggplot2)
+#-------------------------------------------------
+
+my_data <- 1:20
+my_data
+make_matrix <- matrix(my_data, 4, 5)
+make_matrix
+change_matrix <- matrix(my_data, 4, 5, byrow = T)
+change_matrix
+change_matrix[3,4]
+
+m1 <- c("My", "Name", "Is", "Shams")
+m2 <- c("I", "Am", "Doing", "Good")
+m3 <- c(1, 2, 3, 4)
+convert_matrix <- rbind(m1, m2, m3)
+convert_matrix
+convert_matrix2 <- cbind(m1, m2, m3)
+convert_matrix2
