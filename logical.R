@@ -135,3 +135,16 @@ convert_matrix <- rbind(m1, m2, m3)
 convert_matrix
 convert_matrix2 <- cbind(m1, m2, m3)
 convert_matrix2
+
+
+Values <- 1:5
+Values
+
+names(Values) <- c("a", "b", "c", "d","e")
+Values
+
+vector_assign <- rep(c("a", "B", "zZ"), esch = 3)
+vector_assign
+
+New_Matrix <- matrix(vector_assign, 3, 3)
+New_Matrix
