@@ -92,3 +92,39 @@ m = Man("men")
 
 h.speak()
 m.speak()
+
+#################################################################
+
+class Vehicle:
+    def __init__(self, brand, wheels):
+        self.brand = brand
+        self.wheels = wheels
+    
+    def info(self):
+        print(f"Every {self.brand} has at least {self.wheels} wheel.")
+
+
+class Car(Vehicle):
+    def __init__(self, brand, doors):
+        super().__init__(brand, 4)
+        self.doors = doors
+    
+    def info(self):
+        print(f"{self.brand} is car with at least {self.doors} doors.")
+
+
+class Bike(Vehicle):
+    def __init__(self, brand, light):
+        super().__init__(brand, 2)
+        self.light = light
+    
+    def info(self):
+        print(f"{self.brand} is a bike name with {self.light} lights.")
+
+v = Vehicle("vehicle", 1)
+c = Car("Marcedes Benz", 4)
+b = Bike("Hero Honda", 2)
+
+v.info()
+c.info()
+b.info()
