@@ -76,55 +76,104 @@
 ################################################################
 ################################################################
 
-class Human:
-    def __init__(self, name):
-        self.name = name
+# class Human:
+#     def __init__(self, name):
+#         self.name = name
     
-    def speak(self):
-        print(f"{self.name} can speak")
+#     def speak(self):
+#         print(f"{self.name} can speak")
 
-class Man(Human):
-    def speak(self):
-        print(f"Some {self.name} speak so loudly")
+# class Man(Human):
+#     def speak(self):
+#         print(f"Some {self.name} speak so loudly")
 
-h = Human("Human")
-m = Man("men")
+# h = Human("Human")
+# m = Man("men")
 
-h.speak()
-m.speak()
+# h.speak()
+# m.speak()
 
 #################################################################
 
-class Vehicle:
-    def __init__(self, brand, wheels):
-        self.brand = brand
-        self.wheels = wheels
+# class Vehicle:
+#     def __init__(self, brand, wheels):
+#         self.brand = brand
+#         self.wheels = wheels
     
-    def info(self):
-        print(f"Every {self.brand} has at least {self.wheels} wheel.")
+#     def info(self):
+#         print(f"Every {self.brand} has at least {self.wheels} wheel.")
 
 
-class Car(Vehicle):
-    def __init__(self, brand, doors):
-        super().__init__(brand, 4)
-        self.doors = doors
+# class Car(Vehicle):
+#     def __init__(self, brand, doors):
+#         super().__init__(brand, 4)  #super() is used to call the Parent's constructror
+#         self.doors = doors
     
-    def info(self):
-        print(f"{self.brand} is car with at least {self.doors} doors.")
+#     def info(self):
+#         print(f"{self.brand} is car with at least {self.doors} doors.")
 
 
-class Bike(Vehicle):
-    def __init__(self, brand, light):
-        super().__init__(brand, 2)
-        self.light = light
+# class Bike(Vehicle):
+#     def __init__(self, brand, light):
+#         super().__init__(brand, 2)
+#         self.light = light
     
-    def info(self):
-        print(f"{self.brand} is a bike name with {self.light} lights.")
+#     def info(self):
+#         print(f"{self.brand} is a bike name with {self.light} lights.")
 
-v = Vehicle("vehicle", 1)
-c = Car("Marcedes Benz", 4)
-b = Bike("Hero Honda", 2)
+# v = Vehicle("vehicle", 1)
+# c = Car("Marcedes Benz", 4)
+# b = Bike("Hero Honda", 2)
 
-v.info()
-c.info()
-b.info()
+# v.info()
+# c.info()
+# b.info()
+
+###########################################################
+
+# class Animal:
+#     def foods(self):
+#         print("Every animal needs foods")
+    
+# class Elephant(Animal):
+#     def foods(self):
+#         print("Elephants need more foods than others")
+
+# a = Animal()
+# e = Elephant()
+# e.foods()
+############################################################
+
+# class Animal:
+#     def foods(self):
+#         print("Every animal needs foods")
+        
+# class Elephant(Animal):
+#     def foods(self):
+#         super().foods()
+#         print("Elephants eat more than any other animals")
+        
+# e = Elephant()
+# e.foods()
+#############################################################
+
+class Father:
+    def work(self):
+        print("Earning Money")
+
+
+class Mother:
+    def work(self):
+        print("Cooking Foods at home")
+        
+
+class Child(Father, Mother):
+    def work(self):
+        print("I take money and eat outside")
+        Father.work(self)
+        Mother.work(self)
+        
+        
+
+c = Child()
+c.work()
