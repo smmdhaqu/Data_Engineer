@@ -157,23 +157,50 @@
 # e.foods()
 #############################################################
 
-class Father:
-    def work(self):
-        print("Earning Money")
+# class Father:
+#     def work(self):
+#         print("Earning Money")
 
 
-class Mother:
-    def work(self):
-        print("Cooking Foods at home")
+# class Mother:
+#     def work(self):
+#         print("Cooking Foods at home")
         
 
-class Child(Father, Mother):
-    def work(self):
-        print("I take money and eat outside")
-        Father.work(self)
-        Mother.work(self)
+# class Child(Father, Mother):
+#     def work(self):
+#         print("I take money and eat outside")
+#         Father.work(self)
+#         Mother.work(self)
         
         
 
-c = Child()
-c.work()
+# c = Child()
+# c.work()
+
+
+class Base:
+    def info(self):
+        pass
+
+class Father(Base):
+    def info(self):
+        print("I am a Doctor")
+        super().info()    #super() to call the next method in the MRO chain
+
+class Mother(Base):
+    def info(self):
+        print("I am a nurse")
+        super().info()
+
+class Child(Father, Mother): #Child → Father → Mother → Base → object
+
+    def info(self):
+        print("I am a Student")
+        super().info()     #Method Resolution Order or MRO.
+
+child = Child()
+child.info()
+    
+
+        
