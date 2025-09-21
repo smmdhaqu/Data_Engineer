@@ -204,23 +204,48 @@
 # child.info()
     
 
-class A:
-    def show_info(self):
-        print("A wil print at the End")
+# class A:
+#     def show_info(self):
+#         print("A wil print at the End")
     
-class B(A):
-    def show_info(self):
-        print("B will print First")
-        super().show_info()
+# class B(A):
+#     def show_info(self):
+#         print("B will print First")
+#         super().show_info()
 
-class C(A):
-    def show_info(self):
-        print("C will print Second")
-        super().show_info()
+# class C(A):
+#     def show_info(self):
+#         print("C will print Second")
+#         super().show_info()
     
     
-class D(B,C):
-    pass
+# class D(B,C):
+#     pass
 
-d = D()
-d.show_info()
+# d = D()
+# d.show_info()
+
+class Person:
+    def __init__(self, name, **kwargs):
+        self.name = name
+        super().__init__(**kwargs)
+
+
+class Worker:
+    def __init__(self, job, **kwargs):
+        self.job = job
+        super().__init__(**kwargs)
+        
+class Student:
+    def __init__(self, grade, **kwargs):
+        self.grade = grade
+        super().__init__(**kwargs)
+        
+
+class Intern(Person, Worker, Student):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+    
+
+intern = Intern(name ="I'm Shams,", job = "I work as a Werkstudent,", grade = "and my grade is okay.")
+print(intern.name, intern.job, intern.grade)
