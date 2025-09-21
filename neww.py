@@ -179,28 +179,48 @@
 # c.work()
 
 
-class Base:
-    def info(self):
-        pass
+# class Base:
+#     def info(self):
+#         print("This is the base class")
+            
 
-class Father(Base):
-    def info(self):
-        print("I am a Doctor")
-        super().info()    #super() to call the next method in the MRO chain
+# class Father(Base):
+#     def info(self):
+#         print("I am a Doctor")
+#         super().info()    #super() to call the next method in the MRO chain
 
-class Mother(Base):
-    def info(self):
-        print("I am a nurse")
-        super().info()
+# class Mother(Base):
+#     def info(self):
+#         print("I am a nurse")
+#         super().info()
 
-class Child(Father, Mother): #Child → Father → Mother → Base → object
+# class Child(Father, Mother): #Child → Father → Mother → Base → object
 
-    def info(self):
-        print("I am a Student")
-        super().info()     #Method Resolution Order or MRO.
+#     def info(self):
+#         print("I am a Student")
+#         super().info()     #Method Resolution Order or MRO.
 
-child = Child()
-child.info()
+# child = Child()
+# child.info()
     
 
-        
+class A:
+    def show_info(self):
+        print("A wil print at the End")
+    
+class B(A):
+    def show_info(self):
+        print("B will print First")
+        super().show_info()
+
+class C(A):
+    def show_info(self):
+        print("C will print Second")
+        super().show_info()
+    
+    
+class D(B,C):
+    pass
+
+d = D()
+d.show_info()
