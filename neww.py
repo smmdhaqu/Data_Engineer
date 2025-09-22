@@ -225,27 +225,42 @@
 # d = D()
 # d.show_info()
 
-class Person:
-    def __init__(self, name, **kwargs):
-        self.name = name
-        super().__init__(**kwargs)
+# class Person:
+#     def __init__(self, name, **kwargs):
+#         self.name = name
+#         super().__init__(**kwargs)
 
 
-class Worker:
-    def __init__(self, job, **kwargs):
-        self.job = job
-        super().__init__(**kwargs)
+# class Worker:
+#     def __init__(self, job, **kwargs):
+#         self.job = job
+#         super().__init__(**kwargs)
         
-class Student:
-    def __init__(self, grade, **kwargs):
-        self.grade = grade
-        super().__init__(**kwargs)
+# class Student:
+#     def __init__(self, grade, **kwargs):
+#         self.grade = grade
+#         super().__init__(**kwargs)
         
 
-class Intern(Person, Worker, Student):
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
+# class Intern(Person, Worker, Student):
+#     def __init__(self, **kwargs):
+#         super().__init__(**kwargs)
     
 
-intern = Intern(name ="I'm Shams,", job = "I work as a Werkstudent,", grade = "and my grade is okay.")
-print(intern.name, intern.job, intern.grade)
+# intern = Intern(name ="I'm Shams,", job = "I work as a Werkstudent,", grade = "and my grade is okay.")
+# print(intern.name, intern.job, intern.grade)
+
+
+# def info(name, **kwargs):
+#     print("Hello Mr/Ms.", name, "your information", kwargs)
+    
+# info("Shams,", age = 26, country = "Germany")
+
+
+def make_config(**kwargs):
+    defaults = {"timeout": 30, "country": "Germany"}
+    cfg = {**defaults, **kwargs}    # Merge the both operations
+    return cfg
+
+print(make_config(country="Luxemburg"))
+# {'timeout': 30, 'retries': 5}
